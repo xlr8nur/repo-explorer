@@ -63,7 +63,7 @@ const LikesPage = () => {
 								</div>
 							</td>
 						</tr>
-					))}
+					))};
 				</tbody>
 			</table>
 		</div>

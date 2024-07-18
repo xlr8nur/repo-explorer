@@ -11,10 +11,13 @@ export const explorePopularRepos = async (req, res) => {
 				},
 			}
 		);
+
 		const data = await response.json();
 
 		res.status(200).json({ repos: data.items });
-	} catch (error) {
+	}
+	
+	catch (error) {
 		res.status(500).json({ error: error.message });
 	}
 };

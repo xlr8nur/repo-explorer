@@ -18,10 +18,13 @@ export const getUserProfileAndRepos = async (req, res) => {
 				authorization: `token ${process.env.GITHUB_API_KEY}`,
 			},
 		});
+
 		const repos = await repoRes.json();
 
 		res.status(200).json({ userProfile, repos });
-	} catch (error) {
+	}
+	
+	catch (error) {
 		res.status(500).json({ error: error.message });
 	}
 };
@@ -49,7 +52,9 @@ export const likeProfile = async (req, res) => {
 		await Promise.all([userToLike.save(), user.save()]);
 
 		res.status(200).json({ message: "User liked" });
-	} catch (error) {
+	}
+	
+	catch (error) {
 		res.status(500).json({ error: error.message });
 	}
 };
@@ -58,7 +63,9 @@ export const getLikes = async (req, res) => {
 	try {
 		const user = await User.findById(req.user._id.toString());
 		res.status(200).json({ likedBy: user.likedBy });
-	} catch (error) {
+	}
+	
+	catch (error) {
 		res.status(500).json({ error: error.message });
 	}
 };
