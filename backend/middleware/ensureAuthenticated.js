@@ -3,5 +3,5 @@ export async function ensureAuthenticated(req, res, next) {
 		return next();
 	}
 
-	res.redirect(process.env.CLIENT_BASE_URL + "/login");
+	res.redirect(process.env.CLIENT_BASE_URL + "/login")
 };
