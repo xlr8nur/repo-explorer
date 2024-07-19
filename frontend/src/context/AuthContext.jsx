@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAuthContext = () => {
-	return useContext(AuthContext);
+	return useContext(AuthContext)
 };
 
 export const AuthContextProvider = ({ children }) => {
@@ -19,14 +19,16 @@ export const AuthContextProvider = ({ children }) => {
 				const res = await fetch("/api/auth/check", { credentials: "include" });
 				const data = await res.json();
 				setAuthUser(data.user); // null or authenticated user object
-			} catch (error) {
+			}
+			
+			catch (error) {
 				toast.error(error.message);
 			} finally {
 				setLoading(false);
 			}
 		};
-		checkUserLoggedIn();
+		checkUserLoggedIn()
 	}, []);
 
-	return <AuthContext.Provider value={{ authUser, setAuthUser, loading }}>{children}</AuthContext.Provider>;
+	return <AuthContext.Provider value={{ authUser, setAuthUser, loading }}>{children}</AuthContext.Provider>
 };

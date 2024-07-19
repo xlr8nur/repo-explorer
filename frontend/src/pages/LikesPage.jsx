@@ -14,7 +14,9 @@ const LikesPage = () => {
 				if (data.error) throw new Error(data.error);
 
 				setLikes(data.likedBy);
-			} catch (error) {
+			}
+			
+			catch (error) {
 				toast.error(error.message);
 			}
 		};
@@ -63,7 +65,7 @@ const LikesPage = () => {
 								</div>
 							</td>
 						</tr>
-					))};
+					))}
 				</tbody>
 			</table>
 		</div>

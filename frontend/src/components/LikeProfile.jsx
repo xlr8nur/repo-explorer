@@ -13,11 +13,14 @@ const LikeProfile = ({ userProfile }) => {
 				method: "POST",
 				credentials: "include",
 			});
+
 			const data = await res.json();
 
 			if (data.error) throw new Error(data.error);
 			toast.success(data.message);
-		} catch (error) {
+		}
+		
+		catch (error) {
 			toast.error(error.message);
 		}
 	};

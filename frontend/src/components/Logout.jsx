@@ -11,7 +11,9 @@ const Logout = () => {
 			const data = await res.json();
 			console.log(data);
 			setAuthUser(null);
-		} catch (error) {
+		}
+		
+		catch (error) {
 			toast.error(error.message);
 		}
 	};
