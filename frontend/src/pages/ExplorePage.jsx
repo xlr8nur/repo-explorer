@@ -42,6 +42,12 @@ const ExplorePage = () => {
 						onClick={() => exploreRepos("typescript")}
 					/>
 					<img
+						src='/solidity.svg'
+						alt='Solidity logo'
+						className='h-11 sm:h-20 cursor-pointer'
+						onClick={() => exploreRepos("solidity")}
+					/>
+					<img
 						src='/c++.svg'
 						alt='C++ logo'
 						className='h-11 sm:h-20 cursor-pointer'
