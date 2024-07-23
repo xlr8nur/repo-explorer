@@ -8,7 +8,7 @@
 Check out the live demo of the application [here](https://github-similar.onrender.com/).
 
 # Some Features:
-- Tech stack: MERN + Github API + TailwindCSS
+- Tech stack: MongoDB, Express, React, Node + Github API + TailwindCSS
 - Authentication && Authorization with Passport.js (Github Auth)
 - Fetch Github User Profiles and Repos
 - Filter Repos
