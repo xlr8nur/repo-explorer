@@ -1,4 +1,4 @@
-# similar-github
+# Repository Explorer
 
 ![ss](https://github.com/user-attachments/assets/c1c308fe-0c85-46b0-8006-28232695aa3a)
 
